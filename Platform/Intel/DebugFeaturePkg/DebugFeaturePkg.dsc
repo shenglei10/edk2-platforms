@@ -96,3 +96,9 @@
 
   DebugFeaturePkg/AcpiDebug/AcpiDebugDxe.inf
   DebugFeaturePkg/AcpiDebug/AcpiDebugSmm.inf
+
+  DebugFeaturePkg/Library/TraceHubHookLibNull/TraceHubHookLibNull.inf
+  DebugFeaturePkg/Library/TraceHubDebugLibNull/TraceHubDebugLibNull.inf
+  DebugFeaturePkg/Library/TraceHubDebugLibSvenTx/DxeTraceHubDebugLibSvenTx.inf
+  DebugFeaturePkg/Library/TraceHubDebugLibSvenTx/PeiTraceHubDebugLibSvenTx.inf
+  DebugFeaturePkg/Library/TraceHubDebugLibSvenTx/BaseTraceHubDebugLibSvenTx.inf
