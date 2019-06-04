@@ -1,0 +1,60 @@
+## @file
+# Pei TraceHub Debug Lib instance
+# This instance may be used in SEC code that runs in PEI phase.
+# It can't be used in early SEC code before PeiCore.
+#
+# Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = PeiTraceHubDebugLibSvenTx
+  FILE_GUID                      = BEE7DE18-D2D2-4E63-A690-EB745C6872F0
+  MODULE_TYPE                    = PEIM
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = TraceHubDebugLib|SEC PEI_CORE PEIM
+
+#
+# The following information is for reference only and not required by the build tools.
+#
+# VALID_ARCHITECTURES = IA32 X64
+#
+
+[Pcd]
+  gDebugFeaturePkgTokenSpaceGuid.PcdTraceHubDebugLibMaster       ## CONSUMES
+  gDebugFeaturePkgTokenSpaceGuid.PcdTraceHubDebugLibChannel      ## CONSUMES
+
+[LibraryClasses]
+  TraceHubHookLib
+  BaseMemoryLib
+  DebugLib
+  MemoryAllocationLib
+  PcdLib
+  HobLib
+
+[Packages]
+  MdePkg/MdePkg.dec
+  DebugFeaturePkg/DebugFeaturePkg.dec
+
+[Sources]
+  sventx/src/sventx_api.c
+  sventx/src/sventx_compiler.c
+  sventx/src/sventx_crc32.c
+  sventx/src/sventx_init.c
+  sventx/src/sventx_inline.c
+  sventx/src/sventx_write.c
+  sventx/platform/UEFI/src/sventx_platform.c
+  sventx/api.h
+  sventx/compiler.h
+  sventx/crc32.h
+  sventx/devh.h
+  sventx/event.h
+  sventx/inline.h
+  sventx/sventx.h
+  sventx/sventx_platform.h
+  sventx/sventx_platform_config.h
+  PeiTraceHubDebugLib.c
+  EnableTraceHubData.c
+  EnableTraceHubData.h
