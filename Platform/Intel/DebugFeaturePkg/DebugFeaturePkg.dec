@@ -62,6 +62,11 @@
   ## This PCD specifies AcpiDebug buffer size.
   gDebugFeaturePkgTokenSpaceGuid.PcdAcpiDebugBufferSize|0x10000|UINT32|0x0000000A
 
+  ## This PCD specifies Master of TraceHub device
+  gDebugFeaturePkgTokenSpaceGuid.PcdTraceHubDebugLibMaster|0x0|UINT32|0x0000000D
+  ## This PCD specifies Channel of TraceHub device
+  gDebugFeaturePkgTokenSpaceGuid.PcdTraceHubDebugLibChannel|0x0|UINT32|0x0000000E
+
 [PcdsDynamic, PcdsDynamicEx]
   ## This PCD specifies AcpiDebug buffer address
   gDebugFeaturePkgTokenSpaceGuid.PcdAcpiDebugAddress|0|UINT32|0x0000000B
