@@ -3,7 +3,7 @@
 #
 # This package provides common open source Intel silicon modules.
 #
-# Copyright (c) 2016 - 2018, Intel Corporation. All rights reserved.<BR>
+# Copyright (c) 2016 - 2019, Intel Corporation. All rights reserved.<BR>
 # SPDX-License-Identifier: BSD-2-Clause-Patent
 #
 ##
@@ -21,6 +21,12 @@
   ## @libraryclass  Provides services to access Microcode region on flash device.
   #
   MicrocodeFlashAccessLib|Include/Library/MicrocodeFlashAccessLib.h
+
+  ## @libraryclass    Provide services to write buffer to TraceHub.
+  TraceHubDebugLib|Include/Library/TraceHubDebugLib.h
+
+  ## @libraryclass    Provide the specific hooks for TraceHub.
+  TraceHubHookLib|Include/Library/TraceHubHookLib.h
 
 [Guids]
   ## GUID for Package token space
