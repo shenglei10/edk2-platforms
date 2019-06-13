@@ -53,6 +53,12 @@
   # @Prompt Error code for VTd error.
   gIntelSiliconPkgTokenSpaceGuid.PcdErrorCodeVTdError|0x02008000|UINT32|0x00000005
 
+  ## This PCD specifies Master of TraceHub device
+  gIntelSiliconPkgTokenSpaceGuid.PcdTraceHubDebugLibMaster|0x0|UINT32|0x00000006
+
+  ## This PCD specifies Channel of TraceHub device
+  gIntelSiliconPkgTokenSpaceGuid.PcdTraceHubDebugLibChannel|0x0|UINT32|0x00000007
+
 [PcdsFixedAtBuild, PcdsPatchableInModule, PcdsDynamic, PcdsDynamicEx]
   ## This is the GUID of the FFS which contains the Graphics Video BIOS Table (VBT)
   # The VBT content is stored as a RAW section which is consumed by GOP PEI/UEFI driver.
